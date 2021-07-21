@@ -59,21 +59,28 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <input
-          type="text"
-          placeholder="name"
-          name="name"
-          value={this.state.itemInfo.name}
-          onChange={this.handleChange}
-        />
-        <input
-          type="text"
-          placeholder="quantity"
-          name="quantity"
-          value={this.state.itemInfo.quantity}
-          onChange={this.handleChange}
-        />
-        <button onClick={this.handleClick}>Add</button>
+        <img className="icecream" src="https://i.imgur.com/SGmsIYU.png" alt="icecreamIllustration"/>
+        <h3 className="intro-title">What’s <mark className="highlight">not</mark> <br/> on your fridge?</h3>
+        <div className="input-container">
+          <input
+            className="input-name"
+            type="text"
+            placeholder="Insert item"
+            name="name"
+            value={this.state.itemInfo.name}
+            onChange={this.handleChange}
+          />
+          <input
+            className="input-quantity"
+            type="text"
+            placeholder="Quantity"
+            name="quantity"
+            value={this.state.itemInfo.quantity}
+            onChange={this.handleChange}
+          />
+          <button className="add-button" onClick={this.handleClick}>Add</button>
+        </div>
+        
       </div>
     );
   }
