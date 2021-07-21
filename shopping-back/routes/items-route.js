@@ -41,4 +41,18 @@ router.put("/:id", (req, res) => {
   );
 });
 
+router.delete("/:id", (req, res) => {
+  connection.query(
+    "DELETE FROM item WHERE id=?",
+    [req.params.id],
+    (err, results) => {
+      if (err) {
+        res.send("Error deleting item from the list");
+      } else {
+        res.send("Item deleted correctly from the list");
+      }
+    }
+  );
+});
+
 module.exports = router;
