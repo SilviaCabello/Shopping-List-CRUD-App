@@ -27,4 +27,18 @@ router.post("/", (req, res) => {
   );
 });
 
+router.put("/:id", (req, res) => {
+  connection.query(
+    "UPDATE item SET name=? WHERE id=?",
+    [req.body.name, req.params.id],
+    (err, results) => {
+      if (err) {
+        res.send("Error trying to edit the item");
+      } else {
+        res.send("Item edited correctly");
+      }
+    }
+  );
+});
+
 module.exports = router;
