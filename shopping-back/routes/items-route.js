@@ -21,7 +21,7 @@ router.post("/", (req, res) => {
       if (err) {
         res.send("Error adding the new item to the list");
       } else {
-        res.send("Item added correctly to the list");
+        res.json(req.body);
       }
     }
   );
