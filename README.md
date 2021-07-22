@@ -34,3 +34,11 @@ What's not on your fridge?
 [shoppinglist.sql.zip](https://github.com/SilviaCabello/Shopping-List-CRUD-App/files/6862114/shoppinglist.sql.zip)
 
 
+# How to install and run your application
+1. Clone this repository
+2. Open it on your favorite text editor
+3. Run npm install
+4. Go to the config file and insert your user and your password for MySQL
+5. Download the SQL file and run it
+6. Run the backend and the frontend
+7. Go to your browser and start adding new items to your shopping list :) 
