@@ -6,8 +6,8 @@ const Item = ({ name, quantity, id, deleteItems }) => {
       <div className="horizontal-line"></div>
       <div className="item">
         <p>
-          {name} <bn/>
-          {quantity}
+          {name}
+          <span className="quantity">({quantity})</span>
         </p>
         <button onClick= {() => deleteItems(id)} className="delete-button">Delete</button>
       </div>

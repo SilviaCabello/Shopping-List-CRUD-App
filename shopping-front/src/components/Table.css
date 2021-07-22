@@ -1,25 +1,47 @@
 .item {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
 }
 
 .delete-button {
   height: 20px;
   width: 50px;
   border: none;
-  background-color: #eaf565;
-  margin: 16px 0 0 30px;
+  color: #ff5678;
+  /* background-color: #eaf565; */
+  background-color: transparent;
+  margin: 16px 18px 0 30px;
   font-size: 11px;
   cursor: pointer;
-  box-shadow: 1px 1px 3px 0 #d3d3d3;
+  /* box-shadow: 1px 1px 3px 0 #d3d3d3; */
 }
 
 .item p {
   margin-left: 18px;
 }
 
+.quantity {
+  color: grey;
+  font-weight: 500;
+}
+
 .horizontal-line {
   width: 100%;
   height: 1px;
   background-color: rgb(186, 186, 186);
+}
+
+/*---------- Desktop Version ----------*/
+
+@media (min-width: 1024px) {
+  .item {
+    width: 40%;
+    margin: auto;
+  }
+
+  .horizontal-line {
+      width: 40.5%;
+      margin: auto;
+  }
 }
