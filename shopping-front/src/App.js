@@ -10,6 +10,7 @@ class App extends Component {
       item: [],
       itemInfo: { name: "", quantity: "" },
       itemData: {},
+  
     };
   }
 
@@ -52,6 +53,17 @@ class App extends Component {
       );
   };
 
+  deleteItems = (id) => {
+    fetch(`/items/${id}`, {
+      method: "DELETE",
+      headers: {
+        Authorization: "Bearer my-token",
+        "My-Custom-Header": "foobar",
+      },
+    });
+    this.setState({ item: this.state.item.filter((it) => it.id !== id )});
+  };
+
   componentDidUpdate(prevProps, prevState) {
     if (prevState.itemData !== this.state.itemData) {
       this.sendItems();
@@ -61,8 +73,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <img className="icecream" src="https://i.imgur.com/SGmsIYU.png" alt="icecreamIllustration"/>
-        <h3 className="intro-title">What’s <mark className="highlight">not</mark> <br/> on your fridge?</h3>
+        <img
+          className="icecream"
+          src="https://i.imgur.com/SGmsIYU.png"
+          alt="icecreamIllustration"
+        />
+        <h3 className="intro-title">
+          What’s <mark className="highlight">not</mark> <br /> on your fridge?
+        </h3>
         <div className="input-container">
           <input
             className="input-name"
@@ -80,12 +98,13 @@ class App extends Component {
             value={this.state.itemInfo.quantity}
             onChange={this.handleChange}
           />
-          <button className="add-button" onClick={this.handleClick}>Add</button>
+          <button className="add-button" onClick={this.handleClick}>
+            Add
+          </button>
         </div>
-        
-        {/* <Table data={this.state.item}/> */}
-        <Table2 data={this.state.item}/>
 
+        {/* <Table data={this.state.item}/> */}
+        <Table2 data={this.state.item} deleteItems={this.deleteItems} />
       </div>
     );
   }
