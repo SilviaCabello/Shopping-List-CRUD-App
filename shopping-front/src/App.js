@@ -9,7 +9,6 @@ class App extends Component {
       item: [],
       itemInfo: { name: "", quantity: "" },
       itemData: {},
-  
     };
   }
 
@@ -60,7 +59,20 @@ class App extends Component {
         "My-Custom-Header": "foobar",
       },
     });
-    this.setState({ item: this.state.item.filter((it) => it.id !== id )});
+    this.setState({ item: this.state.item.filter((it) => it.id !== id) });
+  };
+
+  editItems = (id) => {
+    fetch(`/items/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+        Authorization: "Bearer my-token",
+        "My-Custom-Header": "foobar",
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => this.setState(data.id));
   };
 
   componentDidUpdate(prevProps, prevState) {
@@ -101,9 +113,17 @@ class App extends Component {
             Add
           </button>
         </div>
-
-        {/* <Table data={this.state.item}/> */}
-        <Table2 data={this.state.item} deleteItems={this.deleteItems} />
+        <Table2
+          data={this.state.item}
+          deleteItems={this.deleteItems}
+          editItems={this.editItems}
+        />
+        <p className="codedby">
+          Coded by{" "}
+          <a href="https://www.linkedin.com/in/silviacabellom/" target="_blank">
+            Silvia Cabello
+          </a>
+        </p>
       </div>
     );
   }

@@ -4,6 +4,12 @@
   justify-content: space-between;
 }
 
+.name-and-quantity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .delete-button {
   height: 20px;
   width: 50px;
@@ -11,7 +17,20 @@
   color: #ff5678;
   /* background-color: #eaf565; */
   background-color: transparent;
-  margin: 16px 18px 0 30px;
+  margin: 16px 18px 0 10px;
+  font-size: 11px;
+  cursor: pointer;
+  /* box-shadow: 1px 1px 3px 0 #d3d3d3; */
+}
+
+.edit-button {
+  height: 20px;
+  width: 50px;
+  border: none;
+  color: rgb(31, 31, 31);
+  /* background-color: #eaf565; */
+  background-color: transparent;
+  margin: 16px 0px 0 30px;
   font-size: 11px;
   cursor: pointer;
   /* box-shadow: 1px 1px 3px 0 #d3d3d3; */
@@ -19,12 +38,13 @@
 
 .item p {
   margin-left: 18px;
+  font-weight: bold;
 }
 
-.quantity {
+/* .quantity {
   color: grey;
   font-weight: 500;
-}
+} */
 
 .horizontal-line {
   width: 100%;
@@ -41,7 +61,7 @@
   }
 
   .horizontal-line {
-      width: 40.5%;
-      margin: auto;
+    width: 40.5%;
+    margin: auto;
   }
 }
