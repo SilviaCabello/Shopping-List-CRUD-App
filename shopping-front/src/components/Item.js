@@ -3,9 +3,8 @@ import "./Table.css";
 const Item = ({ name, quantity }) => {
   return (
     <div>
-      <div className="horizontal-line"></div>  
+      <div className="horizontal-line"></div>
       <div className="item">
-        <p>New item</p>
         <p>
           {quantity}
           {name}
