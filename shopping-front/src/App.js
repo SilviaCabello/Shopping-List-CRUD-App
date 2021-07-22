@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import Table from "./components/Table";
+import Table2 from "./components/Table2";
 
 class App extends Component {
   constructor(props) {
@@ -81,6 +83,9 @@ class App extends Component {
           <button className="add-button" onClick={this.handleClick}>Add</button>
         </div>
         
+        {/* <Table data={this.state.item}/> */}
+        <Table2 data={this.state.item}/>
+
       </div>
     );
   }
