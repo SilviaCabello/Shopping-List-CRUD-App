@@ -42,7 +42,12 @@ What's not on your fridge?
 1. Clone this repository
 2. Open it on your favorite text editor
 3. Run npm install
-4. Go to the config file and insert your user and your password for MySQL
-5. Download the SQL file and run it
-6. Run the backend and the frontend
-7. Go to your browser and start adding new items to your shopping list :) 
+4. Create a .env file with your user and password:
+    DB_HOST=localhost
+    DB_PORT=3306
+    DB_USER=user
+    DB_PASSWORD=password
+    DB_NAME=shoppinglist
+6. Download the SQL file and run it
+7. Run the backend and the frontend
+8. Go to your browser and start adding new items to your shopping list :) 
