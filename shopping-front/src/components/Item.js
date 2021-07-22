@@ -6,8 +6,8 @@ const Item = ({ name, quantity }) => {
       <div className="horizontal-line"></div>
       <div className="item">
         <p>
-          {quantity}
-          {name}
+          {name} <bn/>
+          ({quantity})
         </p>
         <button className="delete-button">Delete</button>
       </div>

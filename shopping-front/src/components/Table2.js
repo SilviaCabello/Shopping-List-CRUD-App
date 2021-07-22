@@ -5,7 +5,7 @@ const Table2 = ({ data }) => {
     <div>
       
       {data.map((item) => (
-        <Item key={data.id} name={item.name}/>
+        <Item key={data.id} name={item.name} quantity={item.quantity}/>
       ))}
       <div className="horizontal-line"></div>
     </div>
