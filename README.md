@@ -33,6 +33,10 @@ What's not on your fridge?
 # SQL File
 [shoppinglist.sql.zip](https://github.com/SilviaCabello/Shopping-List-CRUD-App/files/6862114/shoppinglist.sql.zip)
 
+# Screenshots
+<img width="1244" alt="Captura de pantalla 2021-07-22 a las 15 07 06" src="https://user-images.githubusercontent.com/78726341/126644058-e29902af-075f-4442-9b40-1b7291cf4864.png">
+<img width="1190" alt="Captura de pantalla 2021-07-22 a las 15 05 45" src="https://user-images.githubusercontent.com/78726341/126644077-700593da-2b96-458c-8d4a-298a3c581b9d.png">
+
 
 # How to install and run your application
 1. Clone this repository
