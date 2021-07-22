@@ -30,3 +30,6 @@ What's not on your fridge?
 
 <img width="268" alt="Captura de pantalla 2021-07-21 a las 11 27 42" src="https://user-images.githubusercontent.com/78726341/126466008-ef076d15-d36b-43c5-9bf0-e2b9a315c782.png">
 
+[shoppinglist.sql.zip](https://github.com/SilviaCabello/Shopping-List-CRUD-App/files/6862114/shoppinglist.sql.zip)
+
+
